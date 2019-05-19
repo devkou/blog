@@ -53,16 +53,16 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.jpg?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/rocket.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.jpg?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/rocket.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.jpg?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/rocket.ico?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/favicon.jpg?v=5.1.4" color="#222">
+  <link rel="mask-icon" href="/images/rocket.ico?v=5.1.4" color="#222">
 
 
 
@@ -83,7 +83,7 @@
 <meta name="keywords" content="笔记,技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/05/15/hello-world/index.html">
+<meta property="og:url" content="http://devkou.github.com/2019/05/15/hello-world/index.html">
 <meta property="og:site_name" content="島">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:locale" content="zh-Hans">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/15/hello-world/">
+  <link rel="canonical" href="http://devkou.github.com/2019/05/15/hello-world/">
 
 
 
@@ -285,12 +285,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://devkou.github.com/2019/05/15/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="飛翔的企鵝">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/favicon.jpg">
+      <meta itemprop="image" content="/images/miao.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -410,9 +410,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+            <a href="/tags/笔记/" <i class="fa fa-tag"> 笔记</a>
           
-            <a href="/tags/技巧/" rel="tag"># 技巧</a>
+            <a href="/tags/技巧/" <i class="fa fa-tag"> 技巧</a>
           
         </div>
       
@@ -486,7 +486,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/favicon.jpg" alt="飛翔的企鵝">
+              <img class="site-author-image" itemprop="image" src="/images/miao.jpg" alt="飛翔的企鵝">
             
               <p class="site-author-name" itemprop="name">飛翔的企鵝</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -759,11 +759,19 @@
         notify: false,
         appId: 'o2dwvkHol2FIEjTktl5TurEf-gzGzoHsz',
         appKey: 'DKR3dvkYuLdaTjKFVI3KsltA',
-        placeholder: 'Just go go',
+        placeholder: '✧(≖ ◡ ≖✿)老铁，你不想说两句吗？',
         avatar:'mm',
         guest_info:guest,
         pageSize:'10' || 10,
     });
+
+        //新增以下代码即可，可以移除.info下所有子节点。
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
   </script>
 
 
